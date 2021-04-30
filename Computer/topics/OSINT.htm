@@ -1,0 +1,506 @@
+﻿
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>OSINT</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<style>
+html {
+	overflow-y:scroll;
+}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto; 
+	background-color: #FFFFFF; 
+}
+
+#winchm_template_top{
+	margin: 0px;
+	padding-top: 10px;
+	padding-left: 5px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+
+	font-family: arial, helvetica, sans-serif;
+	font-size: 35px;
+	font-style: normal;
+	font-weight: normal;
+	color: #FFFFFF;
+
+	border-bottom-style: solid;
+	border-bottom-width: 4px;
+	border-bottom-color: #000000;
+
+	width: auto;
+	background-color: #FFFFFF;
+	text-align: left;
+	background-image: url('template/hgrad.png');
+	background-repeat: no-repeat;
+	
+}
+
+#winchm_template_navigation{
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	margin-right: 0px;
+
+	padding-top: 7px;
+	padding-left: 5px;
+	padding-bottom: 6px;
+	padding-right: 5px;
+
+	font-family: arial, helvetica, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: normal;
+	color: #808080; 
+
+	border-top-style: solid;
+	border-top-width: 3px;
+	border-top-color: #C1C1C1;
+
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #DBDBDB;
+	
+	background-color: #FFFFFF;
+	width: auto;
+}
+
+#winchm_template_button{
+	float: right;
+	top: -3px;
+	position: relative;
+	text-align: right;
+	right: -5px;
+	height: auto;
+}
+
+#winchm_template_title {
+	padding: 0px;
+	margin-top: 15px;
+	margin-left: 0px;
+	margin-bottom: 15px;
+	margin-right: 0px;
+
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 22px;
+	font-weight: bold;
+	color: #005680;
+	text-align: center;
+	width: auto;
+	background-color: #FFFFFF;
+
+}
+#winchm_template_content{
+	padding: 0px;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 15px;
+	margin-right: 15px;
+
+	width: auto  !important;
+	width: 100%;
+}
+
+#winchm_template_footer{
+	border-width: 1px;
+	border-color: #c0c0c0;
+	border-top-style: solid;
+	
+	margin-top: 0px;
+	margin-left: 15px;
+	margin-bottom: 5px;
+	margin-right: 15px;
+
+	padding-top: 6px;
+	padding-left: 0px;
+	padding-bottom: 20px;
+	padding-right: 0px;
+
+	font-family: arial, helvetica, sans-serif;
+	font-size: 11px;
+	color: #909090;
+
+	text-align: center;	
+	width: auto;	
+}
+
+#winchm_template_navigation a:link	{text-decoration: none;color: #0000ff}
+#winchm_template_navigation a:visited  {text-decoration: none; color: #0000ff}
+#winchm_template_navigation a:active {text-decoration: none; color: #0000ff}
+#winchm_template_navigation a:hover {text-decoration: none;color: #0000ff}
+
+a:link	{text-decoration: underline; color:#0033cc}
+a:visited  {text-decoration: underline; color: #0033cc}
+a:active {text-decoration: underline; color: #0033cc }
+a:hover {text-decoration: underline;color: #ff0000;}
+
+@media print
+{
+#winchm_template_button{
+visibility:hidden;
+}
+}
+</style>
+</head>
+
+<body><script language="JavaScript" type="text/JavaScript">
+function syn(){
+if(parent.nav.tree){
+ if(parent.nav.tree.loaded){
+  parent.nav.tree.selectNode(35);
+ }else{
+  setTimeout("syn()",500);
+}
+  }else{
+  setTimeout("syn()",500);
+  }}
+if(parent!=self){
+  setTimeout("syn()",100);
+}else{
+  parent.location.href = "../index.htm?page=OSINT.htm";
+}
+originalOnload = window.onload;
+if(originalOnload==null){
+window.onload = function(){parent.contentLoaded = true;};
+}else{
+window.onload = function(){originalOnload();parent.contentLoaded = true;};
+}
+</script> 
+
+
+<div id="winchm_template_top"><div id="winchm_template_button"><A href="Tcpdump.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="template/btn_prev_n.gif" border="0"></a><img id="winchm_template_next" alt="Next topic" src="template/btn_next_g.gif" border="0"></div>
+<nobr><IMG align=absMiddle src="template/logo.png" width=40 height=40 style="HEIGHT: 55px; WIDTH: 74px">&nbsp;<FONT size=6><STRONG>COMPUTER</STRONG></FONT></nobr></div>
+<div id="winchm_template_navigation">Computer &gt; 
+Info Gathering &gt; </div>
+<div id="winchm_template_title">OSINT</div>
+<div id="winchm_template_content">
+<H3 class=p 
+style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px">Whois</H3>
+<td >
+  <table cellspacing=0 cellpadding=2 style="FONT-SIZE: 11pt; BORDER-TOP: 0pt solid; BORDER-RIGHT: 0pt solid; WIDTH: 100%; BORDER-BOTTOM: 0pt solid; BORDER-LEFT: 0pt solid" borderColor=#000000 width="100%" border=1>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>whois churchofsatan.com </FONT> 
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>basic info about domain name </FONT>    
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>whois 38.100.193.70 </FONT> 
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>reverse lookup to get more info about an IP 
+</FONT>        
+  </td>
+  </tr>
+  </table>
+<H3>dig</H3>
+<P>
+</td></P>
+<td >
+  <table cellspacing=0 cellpadding=2 style="FONT-SIZE: 11pt; BORDER-TOP: 0pt solid; BORDER-RIGHT: 0pt solid; WIDTH: 100%; BORDER-BOTTOM: 0pt solid; BORDER-LEFT: 0pt solid" borderColor=#000000 width="100%" border=1>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>dig google.com </FONT> 
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>get 
+      the IP address </FONT>   
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>dig google.com ns </FONT>  
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>get 
+      the nameserver </FONT>  
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>dig google.com mx </FONT>  
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>get 
+      the mail exchange server </FONT>    
+  </td>
+  </tr>
+  </table>
+<H3 class=p 
+style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px">Google 
+Hacking</H3>
+<DIV class=p 
+style="DIRECTION: ltr; TEXT-ALIGN: center; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+class=code><FONT size=3 face="Courier New"><A 
+href="https://www.exploit-db.com/google-hacking-database">https://www.exploit-db.com/google-hacking-database</A></FONT></SPAN></DIV>
+<P>
+</td></P>
+<td >
+  <table cellspacing=0 cellpadding=2 style="FONT-SIZE: 11pt; BORDER-TOP: 0pt solid; BORDER-RIGHT: 0pt solid; WIDTH: 100%; BORDER-BOTTOM: 0pt solid; BORDER-LEFT: 0pt solid" borderColor=#000000 width="100%" border=1>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff" vAlign=middle                     align=left><FONT size=3>site:churchofsatan.com 
+    </FONT>
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    ><FONT size=3>limit the search to churchofsatan.com and 
+      subdomains </FONT>      
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff" vAlign=middle                     align=left><FONT size=3>site:churchofsatan.com 
+      filetype:php </FONT> 
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    ><FONT size=3>locate PHP files (login pages) on 
+      churchofsatan.com </FONT>      
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff" vAlign=middle                     align=left><FONT size=3>site:churchofsatan.com ext:jsp 
+      </FONT> 
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    >
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><FONT size=3>index Java Server Pages, cfm-Coldfusion, pl-Perl</FONT></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><FONT size=3>ext and filetype operator are the same</FONT></DIV>
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff" vAlign=middle                     align=left><FONT size=3>site:churchofsatan.com 
+      -filetype:html </FONT> 
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    ><FONT size=3>exclude HTML pages </FONT>  
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff" vAlign=middle                     align=left><FONT size=3>intitle:"index of" "parent 
+      directory" </FONT>   
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    ><FONT size=3>pages having "index of" in the title and 
+      the words "parent directory" on the page </FONT>              
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff" vAlign=middle                     align=left><FONT size=3>allinurl:apple satan 
+</FONT> 
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    ><FONT size=3>results having all the specified words in 
+      the URL </FONT>        
+  </td>
+  </tr>
+  </table>
+<H3 class=p 
+style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px">Email 
+Harvesting</H3>
+<P class=p 
+style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px">
+<TABLE style="BORDER-COLLAPSE: collapse" borderColor=#000000 cellSpacing=0 
+cellPadding=2 width="100%" border=1>
+  
+  <TR>
+    <TD><SPAN 
+  class=code><FONT size=3><FONT face="Courier New">theharvester -d 
+  churchofsatan.com -b google</FONT>          
+      &nbsp;</FONT></SPAN>&nbsp;</TD>
+    <TD>-d to specify target domain, -b to set the data source to 
+    search&nbsp;</TD></TR></TABLE></P>
+  <H3><SPAN class=code>
+Recon-ng</H3></SPAN>
+<P>
+</td></P>
+<td >
+  <table cellspacing=0 cellpadding=2 style="FONT-SIZE: 11pt; BORDER-TOP: 0pt solid; BORDER-RIGHT: 0pt solid; WIDTH: 100%; BORDER-BOTTOM: 0pt solid; BORDER-LEFT: 0pt solid" borderColor=#000000 width="100%" border=1>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff" vAlign=middle                 align=left><FONT size=3>kali@kali:~$ recon-ng 
+    </FONT> 
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    ><FONT size=3>run recon-ng </FONT> 
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff" vAlign=middle                 align=left><FONT size=3>[recon-ng][default] &gt; 
+      marketplace search github </FONT>    
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    ><FONT size=3>search marketplace for github modules 
+      </FONT>    
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff" vAlign=middle                 align=left><FONT size=3>https://github.com/lanmaster53/recon-ng-marketplace/wiki/API-Keys 
+      </FONT>
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    ><FONT size=3>modules with an asterisk in the K column 
+      require credentials or API keys </FONT>            
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff" vAlign=middle                 align=left><FONT size=3>[r][d] &gt; marketplace info 
+      recon/domainshosts/google_site_web </FONT>    
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    ><FONT size=3>gives description about the module 
+    </FONT>     
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff" vAlign=middle                 align=left><FONT size=3>[r][d] &gt; marketplace 
+      install recon/domainshosts/google_site_web </FONT>    
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    ><FONT size=3>install the module </FONT>  
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff" vAlign=middle                 align=left><FONT size=3>[r][d] &gt; marketplace load 
+      recon/domainshosts/google_site_web </FONT>    
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    ><FONT size=3>load the module </FONT>  
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff" vAlign=middle                 align=left><FONT size=3>[r][d][g] &gt; info </FONT>  
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    ><FONT size=3>gives info about the module like 
+      "options" </FONT>      
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff" vAlign=middle                 align=left><FONT size=3>[r][d][g] &gt; options set 
+      SOURCE churchofsatan.com </FONT>      
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    ><FONT size=3>change the SOURCE options from default to 
+      a website (string) </FONT>         
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff" vAlign=middle                 align=left><FONT size=3>[r][d][g] &gt; run </FONT>  
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    ><FONT size=3>running the module updates the "hosts" 
+      table </FONT>       
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff" vAlign=middle                 align=left><FONT size=3>[r][d][g] &gt; back </FONT>  
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    ><FONT size=3>to go back </FONT>  
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff" vAlign=middle                 align=left><FONT size=3>[r][d] &gt; show </FONT>  
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    ><FONT size=3>gives info about using "show" 
+  </FONT>     
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff" vAlign=middle                 align=left><FONT size=3>[r][d] &gt; show hosts 
+    </FONT>    
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    >
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><FONT size=3>show the "hosts" table</FONT></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><FONT size=3>the host column contains the subdomains of 
+      churchofsatan.com</FONT></DIV>
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff" vAlign=middle                 align=left><FONT size=3>[r][d] &gt; marketplace load 
+      recon/hosts-hosts/resolve </FONT>    
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    >
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><FONT size=3>this module resolves the IP address for a host</FONT></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><FONT size=3>in SOURCE = default uses the host from the "hosts" table having no 
+      IP</FONT></DIV>
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff" vAlign=middle                 align=left><FONT size=3>[r][d][r] &gt; run </FONT>  
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    ><FONT size=3>running with SOURCE = default updates the IP column of hosts table
+  </FONT>     
+  </td>
+  </tr>
+  </table>
+<H3 class=p 
+style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px">Websites</H3>
+<P>
+</td></P>
+<td >
+  <table cellspacing=0 cellpadding=2 style="FONT-SIZE: 11pt; BORDER-TOP: 0pt solid; BORDER-RIGHT: 0pt solid; WIDTH: 100%; BORDER-BOTTOM: 0pt solid; BORDER-LEFT: 0pt solid" borderColor=#000000 width="100%" border=1>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff" vAlign=middle             align=left><FONT size=3>https://osintframework.com 
+      </FONT>
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    ><FONT size=3>list of OSINT tools </FONT>   
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff" vAlign=middle             align=left><FONT size=3>https://searchdns.netcraft.com 
+      </FONT>
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    ><FONT size=3>provides a site report containing 
+      registration info and various "site technology" entries </FONT>           
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff" vAlign=middle             align=left><FONT size=3>https://www.shodan.io 
+    </FONT>
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    >
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><FONT size=3>search engine that crawls devices connected to the 
+      Internet</FONT></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT size=3 face="Courier New">hostname:churchofsatan.com</FONT></SPAN></DIV>
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff" vAlign=middle             align=left><FONT size=3>https://securityheaders.com 
+      </FONT>
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    ><FONT size=3>analyze HTTP response headers 
+  </FONT>   
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff" vAlign=middle             align=left><FONT size=3>https://www.ssllabs.com/ssltest </FONT>
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    ><FONT size=3>analyzes a server's SSL/TLS configuration 
+      </FONT>    
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff" vAlign=middle             align=left><FONT size=3>https://pastebin.com 
+</FONT>
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    ><FONT size=3>website for storing and sharing text 
+      </FONT>     
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff" vAlign=middle             align=left><FONT size=3>https://www.social-searcher.com </FONT>
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    ><FONT size=3>social media search engine 
+  </FONT>   
+  </td>
+  </tr>
+  </table>
+</td>
+</div>
+<div id="winchm_template_footer" align=center>Copyright © 2021 by Mridul Dixit<br> All rights reserved.</div>
+
+</body>
+</html>

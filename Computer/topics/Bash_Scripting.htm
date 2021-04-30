@@ -1,0 +1,910 @@
+﻿
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Bash Scripting</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<style>
+html {
+	overflow-y:scroll;
+}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto; 
+	background-color: #FFFFFF; 
+}
+
+#winchm_template_top{
+	margin: 0px;
+	padding-top: 10px;
+	padding-left: 5px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+
+	font-family: arial, helvetica, sans-serif;
+	font-size: 35px;
+	font-style: normal;
+	font-weight: normal;
+	color: #FFFFFF;
+
+	border-bottom-style: solid;
+	border-bottom-width: 4px;
+	border-bottom-color: #000000;
+
+	width: auto;
+	background-color: #FFFFFF;
+	text-align: left;
+	background-image: url('template/hgrad.png');
+	background-repeat: no-repeat;
+	
+}
+
+#winchm_template_navigation{
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	margin-right: 0px;
+
+	padding-top: 7px;
+	padding-left: 5px;
+	padding-bottom: 6px;
+	padding-right: 5px;
+
+	font-family: arial, helvetica, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: normal;
+	color: #808080; 
+
+	border-top-style: solid;
+	border-top-width: 3px;
+	border-top-color: #C1C1C1;
+
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #DBDBDB;
+	
+	background-color: #FFFFFF;
+	width: auto;
+}
+
+#winchm_template_button{
+	float: right;
+	top: -3px;
+	position: relative;
+	text-align: right;
+	right: -5px;
+	height: auto;
+}
+
+#winchm_template_title {
+	padding: 0px;
+	margin-top: 15px;
+	margin-left: 0px;
+	margin-bottom: 15px;
+	margin-right: 0px;
+
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 22px;
+	font-weight: bold;
+	color: #005680;
+	text-align: center;
+	width: auto;
+	background-color: #FFFFFF;
+
+}
+#winchm_template_content{
+	padding: 0px;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 15px;
+	margin-right: 15px;
+
+	width: auto  !important;
+	width: 100%;
+}
+
+#winchm_template_footer{
+	border-width: 1px;
+	border-color: #c0c0c0;
+	border-top-style: solid;
+	
+	margin-top: 0px;
+	margin-left: 15px;
+	margin-bottom: 5px;
+	margin-right: 15px;
+
+	padding-top: 6px;
+	padding-left: 0px;
+	padding-bottom: 20px;
+	padding-right: 0px;
+
+	font-family: arial, helvetica, sans-serif;
+	font-size: 11px;
+	color: #909090;
+
+	text-align: center;	
+	width: auto;	
+}
+
+#winchm_template_navigation a:link	{text-decoration: none;color: #0000ff}
+#winchm_template_navigation a:visited  {text-decoration: none; color: #0000ff}
+#winchm_template_navigation a:active {text-decoration: none; color: #0000ff}
+#winchm_template_navigation a:hover {text-decoration: none;color: #0000ff}
+
+a:link	{text-decoration: underline; color:#0033cc}
+a:visited  {text-decoration: underline; color: #0033cc}
+a:active {text-decoration: underline; color: #0033cc }
+a:hover {text-decoration: underline;color: #ff0000;}
+
+@media print
+{
+#winchm_template_button{
+visibility:hidden;
+}
+}
+</style>
+</head>
+
+<body><script language="JavaScript" type="text/JavaScript">
+function syn(){
+if(parent.nav.tree){
+ if(parent.nav.tree.loaded){
+  parent.nav.tree.selectNode(9);
+ }else{
+  setTimeout("syn()",500);
+}
+  }else{
+  setTimeout("syn()",500);
+  }}
+if(parent!=self){
+  setTimeout("syn()",100);
+}else{
+  parent.location.href = "../index.htm?page=Bash_Scripting.htm";
+}
+originalOnload = window.onload;
+if(originalOnload==null){
+window.onload = function(){parent.contentLoaded = true;};
+}else{
+window.onload = function(){originalOnload();parent.contentLoaded = true;};
+}
+</script> 
+
+
+<div id="winchm_template_top"><div id="winchm_template_button"><A href="Device_Management.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="template/btn_prev_n.gif" border="0"></a><A href="Basic.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="template/btn_next_n.gif" border="0"></a></div>
+<nobr><IMG align=absMiddle src="template/logo.png" width=40 height=40 style="HEIGHT: 55px; WIDTH: 74px">&nbsp;<FONT size=6><STRONG>COMPUTER</STRONG></FONT></nobr></div>
+<div id="winchm_template_navigation">Computer &gt; 
+Shell &gt; Theory &gt; </div>
+<div id="winchm_template_title">Bash Scripting</div>
+<div id="winchm_template_content">
+<P><FONT size=3>A shell is an interface between the user and 
+the operating system that enables you to manipulate files and run commands, 
+utilities, programs, and much more. A number of different shells are available 
+for Linux, including the Korn shell, the Z shell, the C shell, and the 
+Bourne-again shell, more widely known as bash.</FONT>             
+            
+             
+              
+ </P>
+<td >
+  <table cellspacing=0 cellpadding=2 style="FONT-SIZE: 11pt; BORDER-TOP: 0pt solid; BORDER-RIGHT: 0pt solid; WIDTH: 100%; BORDER-BOTTOM: 0pt solid; BORDER-LEFT: 0pt solid" borderColor=#000000 width="100%" border=1>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>hello.sh </FONT>
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>.sh 
+      extension for script file </FONT>     
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>chmod +x ./hello.sh </FONT>  
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>make the script executable </FONT>   
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>./hello.sh </FONT>
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>execute the script in the file hello from the current directory 
+      </FONT>          
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>#! </FONT>
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>tells os which interpreter to use like #! /bin/bash for bash shell 
+      interpreter </FONT>            
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3># comment </FONT> 
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>note explaining the code, is not read or executed by the 
+      interpreter </FONT>           
+  </td>
+  </tr>
+  </table>
+<H3>Variables</H3>
+<DIV class=p 
+style="DIRECTION: ltr; TEXT-ALIGN: center; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><FONT size=3>In single quotes, bash interprets every enclosed character 
+literally.</FONT></DIV>
+<DIV class=p 
+style="DIRECTION: ltr; TEXT-ALIGN: center; MARGIN-LEFT: 0px; TEXT-INDENT: 0px">
+<DIV class=p 
+style="DIRECTION: ltr; TEXT-ALIGN: center; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><FONT size=3>In double quotes, all characters are viewed literally except $, meaning 
+variables will be substituted.</FONT></DIV>
+<DIV class=p 
+style="DIRECTION: ltr; TEXT-ALIGN: center; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><FONT size=3></FONT>&nbsp;</DIV></DIV>
+<td >
+  <table cellspacing=0 cellpadding=2 style="FONT-SIZE: 11pt; BORDER-TOP: 0pt solid; BORDER-RIGHT: 0pt solid; WIDTH: 100%; BORDER-BOTTOM: 0pt solid; BORDER-LEFT: 0pt solid" borderColor=#000000 width="100%" border=1>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>place="to hell $USER" </FONT>  
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>declaring a variable </FONT>  
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>user=$(whoami) </FONT>
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>set 
+      the value of the variable to the result of a command </FONT>           
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>echo "Welcome $place $user" </FONT>   
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>using a variable with $VAR</FONT>    
+  </td>
+  </tr>
+  </table>
+<H4 class=p 
+style="DIRECTION: ltr; TEXT-ALIGN: center; MARGIN-LEFT: 0px; TEXT-INDENT: 0px">Special Variables</H4>
+<td >
+  <table cellspacing=0 cellpadding=2 style="FONT-SIZE: 11pt; BORDER-TOP: 0pt solid; BORDER-RIGHT: 0pt solid; WIDTH: 100%; BORDER-BOTTOM: 0pt solid; BORDER-LEFT: 0pt solid" borderColor=#000000 width="100%" border=1>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>$0 </FONT>
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>The 
+      name of the Bash script </FONT>     
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>$1 - $9 </FONT>  
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>The 
+      first 9 arguments to the Bash script </FONT>       
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>$# </FONT>
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>Number of arguments passed to the Bash script </FONT>       
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>$@ </FONT>
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>All 
+      arguments passed to the Bash script </FONT>      
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>$? </FONT>
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>The 
+      exit status of the most recently run process </FONT>        
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>$$ </FONT>
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>The 
+      process ID of the current script </FONT>      
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>$USER </FONT>
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>The 
+      username of the user running the script </FONT>       
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>$HOSTNAME </FONT>
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>The 
+      hostname of the machine </FONT>    
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>$RANDOM </FONT>
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>A 
+      random number </FONT>   
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>$LINENO </FONT>
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>The 
+      current line number in the script</FONT>      
+  </td>
+  </tr>
+  </table>
+<H3 class=p 
+style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px">Arguments</H3>
+<DIV class=p 
+style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><FONT size=3>When 
+running the <SPAN class=code>ls -l /var/log</SPAN> command, both <SPAN 
+class=code>-l</SPAN> and <SPAN class=code>/var/log</SPAN> are arguments to the 
+<SPAN class=code>ls</SPAN> command.</FONT> </DIV>
+<DIV class=p 
+style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><FONT size=3></FONT>&nbsp;</DIV>
+</td>
+<td >
+  <table cellspacing=0 cellpadding=2 style="FONT-SIZE: 11pt; BORDER-TOP: 0pt solid; BORDER-RIGHT: 0pt solid; WIDTH: 100%; BORDER-BOTTOM: 0pt solid; BORDER-LEFT: 0pt solid" borderColor=#000000 width="100%" border=1>
+  <tr valign=top>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3><FONT face="Courier New">
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code>#!/bin/bash</SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code>echo "The arg are $1 and $2"</SPAN></DIV></FONT></FONT>
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px">kali@linux:~$ 
+      <SPAN class=code>./arg.sh hello there</SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px">The 
+      arg are hello and there</DIV></FONT>
+  </td>
+  </tr>
+  </table>
+<H3 class=p 
+style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px">Reading 
+User Input</H3>
+<H3>
+</td></H3>
+<td >
+  <table cellspacing=0 cellpadding=2 style="FONT-SIZE: 11pt; BORDER-TOP: 0pt solid; BORDER-RIGHT: 0pt solid; WIDTH: 100%; BORDER-BOTTOM: 0pt solid; BORDER-LEFT: 0pt solid" borderColor=#000000 width="100%" border=1>
+  <tr valign=top>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    ><FONT size=3><SPAN class=code><FONT face=Courier >echo 
+      "User: "</FONT></SPAN> </FONT>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT size=3 face=Courier>read name</FONT></SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT size=3 face=Courier>echo "Welcome 
+      $name"</FONT></SPAN></DIV>
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    ><FONT size=3>taking an input 
+      from the user and assigining it to the variable 
+      name </FONT>
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    >
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT size=3 face="Courier New">read -p "User: " 
+      user</FONT></SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT size=3 face="Courier New">read -sp "Password: " 
+      pass</FONT></SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT size=3 face="Courier New">echo "Your creds are $user and 
+      $pass"</FONT></SPAN></DIV>
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    >
+      <UL>
+        <LI><FONT size=3><FONT valign="Middle" align="Left" >-p allows us to specify a 
+        prompt</FONT> 
+        </FONT>
+        <LI><FONT size=3>-s makes user input 
+        silent</FONT>    
+</LI></UL>
+  </td>
+  </tr>
+  </table>
+<H3 class=p 
+style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px">If, 
+Else &amp; Elif</H3>
+<P class=p 
+style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px">
+<TABLE style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+borderColor=#000000 cellSpacing=0 cellPadding=2 width="100%" border=1>
+  
+  <TR>
+    <TD vAlign=middle align=left>&nbsp;
+      
+<DIV class=p 
+style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+class=code><FONT face="Courier" >if [ &lt;some test&gt; ]</FONT></SPAN></DIV>
+<DIV class=p 
+style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+class=code><FONT face="Courier" >then</FONT></SPAN></DIV>
+<DIV class=p 
+style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+class=code><FONT face="Courier" >&nbsp;&nbsp; &lt;perform 
+action&gt;</FONT></SPAN></DIV>
+<DIV class=p 
+style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+class=code><FONT face="Courier" >elif [ &lt;some test&gt; 
+]</FONT></SPAN></DIV>
+<DIV class=p 
+style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+class=code><FONT face="Courier" >then</FONT></SPAN></DIV>
+<DIV class=p 
+style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+class=code><FONT face="Courier" >&nbsp;&nbsp; &lt;perform different 
+action&gt;</FONT></SPAN></DIV>
+<DIV class=p 
+style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+class=code><FONT face="Courier" >else</FONT></SPAN></DIV>
+<DIV class=p 
+style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+class=code><FONT face="Courier" >&nbsp;&nbsp; &lt;perform yet another diff 
+action&gt;</FONT></SPAN></DIV>
+<DIV class=p 
+style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+class=code><FONT face="Courier" >fi</FONT></SPAN></DIV></TD>
+    <TD vAlign=middle align=left>
+      <P><FONT face=Courier>read -p "Age: " age</FONT></P>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face=Courier>if [ $age -lt 16 ]</FONT>     </SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face=Courier>then</FONT></SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face=Courier>&nbsp;&nbsp; echo "Access Denied"</FONT>   </SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face=Courier>fi</FONT></SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face=Courier></FONT></SPAN>&nbsp;</DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face=Courier>if [ $age -lt 16 ]</FONT>     </SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face=Courier>then</FONT></SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face=Courier>&nbsp;&nbsp; echo "Access Denied"</FONT>   </SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face=Courier>else</FONT></SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face=Courier>&nbsp;&nbsp; echo "Welcome"</FONT>  </SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face=Courier>fi</FONT></SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face=Courier></FONT></SPAN>&nbsp;</DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face=Courier>if [ $age -lt 16 ]</FONT>     </SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face=Courier>then</FONT></SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face=Courier>&nbsp;&nbsp; echo "Access Denied"</FONT>   </SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face=Courier>elif [$age -gt 60 ]</FONT>    </SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face=Courier>then</FONT></SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face=Courier>&nbsp;&nbsp; echo "Hats off to you"</FONT>     </SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face=Courier>else</FONT></SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face=Courier>&nbsp;&nbsp; echo "Welcome"</FONT>  </SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face=Courier>fi</FONT></SPAN></DIV></SPAN></DIV></SPAN></DIV></TD></TR></TABLE></P>
+<td >
+  <table cellspacing=0 cellpadding=2 style="FONT-SIZE: 11pt; BORDER-TOP: 0pt solid; BORDER-RIGHT: 0pt solid; WIDTH: 100%; BORDER-BOTTOM: 0pt solid; BORDER-LEFT: 0pt solid" borderColor=#000000 width="100%" border=1>
+  <tr valign=top>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3><STRONG>Operator</STRONG> </FONT>
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3><STRONG>Description: Expression true if...</STRONG> 
+      </FONT>    
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>!Expression </FONT>
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>Expression is false </FONT>  
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>-n STRING </FONT> 
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>STRING length is greater than zero </FONT>     
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>-z STRING </FONT> 
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>STRING length is zero (empty) </FONT>    
+  </td>
+  </tr>
+  <tr valign=top>
+ <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>STRING1 != STRING2 </FONT>
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>STRING1 is not equal to STRING2 </FONT>     
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>STRING1 = STRING2 </FONT> 
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>STRING1 is equal to STRING2 </FONT>    
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>INTEGER1 -eq INTEGER2 </FONT>  
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>INTEGER1 is equal to INTEGER2 </FONT>    
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>INTEGER1 -ne INTEGER2 </FONT>  
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>INTEGER1 is not equal to INTEGER2 </FONT>     
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>INTEGER1 -gt INTEGER2 </FONT>  
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>INTEGER1 is greater than INTEGER2 </FONT>    
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>INTEGER1 -lt INTEGER2 </FONT>  
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>INTEGER1 is less than INTEGER2 </FONT>    
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>INTEGER1 -ge INTEGER2 </FONT>  
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>INTEGER1 is greater than or equal to INTEGER2 </FONT>       
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>INTEGER1 -le INTEGER2 </FONT>  
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>INTEGER1 is less than or equal to INTEGER2 </FONT>       
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>-d FILE </FONT> 
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>FILE exists and is a directory </FONT>     
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>-e FILE </FONT> 
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>FILE exists </FONT> 
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>-r FILE </FONT> 
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>FILE exists and has read permission </FONT>     
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>-s FILE </FONT> 
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>FILE exists and it is not empty </FONT>      
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>-w FILE </FONT> 
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>FILE exists and has write permission </FONT>     
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff"    ><FONT size=3>-x FILE </FONT> 
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff"><FONT size=3>FILE exists and has execute permission</FONT>     
+  </td>
+  </tr>
+  </table>
+<H3 class=p 
+style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px">Boolean 
+Logical Operations</H3>
+<H4 class=p 
+style="DIRECTION: ltr; TEXT-ALIGN: center; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+class=quote>AND (&amp;&amp;)</SPAN></H4>
+</td>
+<td >
+  <table cellspacing=0 cellpadding=2 style="FONT-SIZE: 11pt; BORDER-TOP: 0pt solid; BORDER-RIGHT: 0pt solid; WIDTH: 100%; BORDER-BOTTOM: 0pt solid; BORDER-LEFT: 0pt solid" borderColor=#000000 width="100%" border=1>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff" vAlign=middle                 align=left><FONT size=3>echo $USER &amp;&amp; echo 
+      $HOSTNAME &amp;&amp; echo $PWD </FONT>       
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    ><FONT size=3>execute the commands one after the other 
+      </FONT>      
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff" vAlign=middle                 align=left><FONT size=3>grep kali /etc/passwd 
+      &amp;&amp; echo "kali found" </FONT>      
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    >
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><FONT size=3>executes the next cmd only if the previous cmd succeeds (or returns 
+      True or 0)</FONT></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><FONT size=3>echo is only executed if kali user is in the /etc/passwd 
+      file</FONT></DIV>
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    >
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT size=3 face="Courier New">if [ $USER == 'kali' ] 
+      &amp;&amp; [ $HOSTNAME == 'kali' ]</FONT></SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT size=3 face="Courier New">then </FONT></SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT size=3 face="Courier New">&nbsp;&nbsp; echo "Multiple 
+      statements are true"</FONT></SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT size=3 face="Courier New">fi</FONT></SPAN></DIV>
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    ><FONT size=3>if both variable comparisons are true, 
+      "if" line succeeds,so "then" branch is executed 
+</FONT>            
+  </td>
+  </tr>
+  </table>
+<H4 class=p 
+style="DIRECTION: ltr; TEXT-ALIGN: center; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+class=quote>OR (||)</SPAN></H4>
+<P>
+</td></P>
+<td >
+  <table cellspacing=0 cellpadding=2 style="FONT-SIZE: 11pt; BORDER-TOP: 0pt solid; BORDER-RIGHT: 0pt solid; WIDTH: 100%; BORDER-BOTTOM: 0pt solid; BORDER-LEFT: 0pt solid" borderColor=#000000 width="100%" border=1>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff" vAlign=middle             align=left><FONT size=3>grep dev /etc/passwd 
+      &amp;&amp; echo "dev found" || echo "dev not found" </FONT>           
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    >
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><FONT size=3>executes the next cmd only if the previous cmd fails (or returns 
+      False or non-zero)</FONT></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><FONT size=3>when grep doesn't found dev in the user file and returns false, the 
+      2nd echo cmd after OR is executed</FONT></DIV>
+  </td>
+  </tr>
+  <tr valign=top>
+  <td style="FONT-FAMILY: monospace; BACKGROUND-COLOR: #ffffff" vAlign=middle             align=left>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT size=3>if [ $USER == 'kali' ] || [ $HOSTNAME == 'dev' 
+      ]</FONT></SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT size=3>then </FONT></SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT size=3>&nbsp;&nbsp; echo "One condition is true, this 
+      line is printed"</FONT></SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT size=3>fi</FONT></SPAN></DIV>
+  </td>
+  <td style="BACKGROUND-COLOR: #ffffff" vAlign=middle align=left    ><FONT size=3>if at least one variable comparison is 
+      true, "if" line succeeds, so "then" branch is executed 
+  </FONT>              
+  </td>
+  </tr>
+  </table>
+<H3>Loops</H3>
+<P>
+<TABLE style="WIDTH: 100%; BORDER-COLLAPSE: collapse" borderColor=#000000 
+cellSpacing=0 cellPadding=2 width="100%" border=1>
+  
+  <TR>
+    <TD vAlign=middle align=left><SPAN class=code><FONT face="Courier New">for 
+      var-name in &lt;list&gt;</FONT></SPAN>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face="Courier New">do </FONT></SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face="Courier New">&nbsp;&lt;action to 
+      perform&gt;</FONT></SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face="Courier New">done</FONT></SPAN></DIV></TD>
+    <TD vAlign=middle align=left>
+      <UL>
+        <LI><SPAN class=code><FONT face="Courier New">for ip in $(seq 1 10); do 
+        echo 10.11.1.$ip; done</FONT></SPAN>
+        <LI><SPAN class=code><SPAN class=code><FONT face="Courier New">for ip in 
+        $(cat list); do echo 10.11.1.$ip; done</FONT></SPAN></SPAN>
+        <LI><SPAN class=code><SPAN class=code><SPAN class=code><FONT face="Courier New">for ip in {1..10}; do echo 10.11.1.$ip; 
+        done</FONT></SPAN></SPAN></SPAN></LI></UL></TD></TR>
+  <TR>
+    <TD vAlign=middle align=left><SPAN class=code><FONT face="Courier New">while [ &lt;some test&gt; ]</FONT></SPAN>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face="Courier New">do</FONT></SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face="Courier New">&nbsp;&lt;perform an 
+      action&gt;</FONT></SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face="Courier New">done</FONT></SPAN></DIV></TD>
+    <TD vAlign=middle align=left><SPAN class=code><FONT face="Courier New">ip=1</FONT></SPAN>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face="Courier New">while [ $ip -le 10 
+      ]</FONT></SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face="Courier New">do</FONT></SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face="Courier New">&nbsp;echo 
+      "10.11.1.$ip"</FONT></SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face="Courier New">&nbsp;((ip++))</FONT></SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code><FONT face="Courier New">done</FONT></SPAN></DIV></TD></TR></TABLE></P>
+<H3>Functions</H3>
+<P><FONT face="Courier New">
+</td>
+<TABLE style="WIDTH: 100%; BORDER-COLLAPSE: collapse" borderColor=#000000 
+cellSpacing=0 cellPadding=2 width="100%" border=1>
+  
+  <TR>
+    <TD vAlign=middle align=left><SPAN class=code>function_name () {</SPAN>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code>commands...</SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code>}</SPAN></DIV></TD>
+    <TD vAlign=middle align=left>&nbsp;</TD></TR>
+  <TR>
+    <TD vAlign=middle align=left>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code>return_me() {</SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code>&nbsp;echo "Hi $1, have a number"</SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code>&nbsp;return $RANDOM</SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code>}</SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code>return_me $USER</SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code>echo "The number is $?"</SPAN></DIV></TD>
+    <TD vAlign=middle align=left>&nbsp;
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=quote>Hi dev, have a number</SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=quote>The number is 47</SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px">&nbsp;</DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><FONT face=Arial>pass $USER as an argument to the function return_me, which 
+      outputs it as $1, the funtions first arg and then return a random number 
+      into $?</FONT></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><FONT face=Arial>using return without $RANDOM, the exit status of the function 
+      (zero for success, non-zero for failure) is returned</FONT></DIV></TD></TR>
+  <TR>
+    <TD vAlign=middle align=left>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code>n1="A"</SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code>n2="B"</SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code>case_change() {</SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code>&nbsp;local n1="a"</SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code>&nbsp;echo "Inside func, n1 is $n1 and n2 is $n2"</SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code>&nbsp;n2="b"</SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code>}</SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code>echo "Before func call, n1 is $n1 and n2 is $n2"</SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code>case_change</SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=code>echo "After func call, n1 is $n1 and n2 is $n2"</SPAN></DIV></TD>
+    <TD vAlign=middle align=left>&nbsp;
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=quote>Before func call, n1 is A and n2 is B</SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=quote>Inside func, n1 is a and n2 is B</SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><SPAN 
+      class=quote>After func call, n1 is A and n2 is b</SPAN></DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px">&nbsp;</DIV>
+      <DIV class=p 
+      style="DIRECTION: ltr; TEXT-ALIGN: left; MARGIN-LEFT: 0px; TEXT-INDENT: 0px"><FONT face=Arial>global variable can be accessed throughout the entire script 
+      whereas a&nbsp; local variable can only be seen within the function in 
+      which it is defined leaving the global variable 
+  untouched</FONT></DIV></TD></TR></TABLE></FONT></P>
+</div>
+<div id="winchm_template_footer" align=center>Copyright © 2021 by Mridul Dixit<br> All rights reserved.</div>
+
+</body>
+</html>
